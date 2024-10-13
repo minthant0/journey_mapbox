@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Journey MapBox',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'My MapBox'),
     );
   }
 }
@@ -40,14 +40,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   static const String ACCESS_TOKEN = String.fromEnvironment("ACCESS_TOKEN");
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('MapboxMaps examples')),
-      body: ACCESS_TOKEN.isEmpty || ACCESS_TOKEN.contains("YOUR_TOKEN")
-          ? buildAccessTokenWarning()
-          : AnimatedRouteExample(),
+      appBar: AppBar(title: const Text('MapboxMap')),
+      body: AnimatedRouteExample(),
     );
   }
 
